@@ -19,5 +19,7 @@
 	"supports": {
 		"className": true,
 		"fontSize": false
-	}
+	},
+	"editorStyle": "wp-block-loginout-editor",
+	"style": "wp-block-loginout"
 }

@@ -20,5 +20,6 @@
 		"fontSize": true,
 		"lineHeight": true
 	},
+	"editorStyle": "wp-block-post-comments-form-editor",
 	"style": "wp-block-post-comments-form"
 }

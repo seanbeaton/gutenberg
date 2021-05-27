@@ -19,5 +19,7 @@
 			"text": false
 		},
 		"lineHeight": true
-	}
+	},
+	"editorStyle": "wp-block-post-comments-link-editor",
+	"style": "wp-block-post-comments-link"
 }

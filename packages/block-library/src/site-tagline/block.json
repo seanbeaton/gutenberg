@@ -25,5 +25,7 @@
 		"__experimentalFontFamily": true,
 		"__experimentalTextTransform": true,
 		"__experimentalLetterSpacing": true
-	}
+	},
+	"editorStyle": "wp-block-site-tagline-editor",
+	"style": "wp-block-site-tagline"
 }

@@ -39,5 +39,6 @@
 		"lineHeight": true,
 		"__experimentalFontFamily": true
 	},
+	"editorStyle": "wp-block-post-title-editor",
 	"style": "wp-block-post-title"
 }
