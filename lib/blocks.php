@@ -195,7 +195,7 @@ function gutenberg_register_core_block_styles( $block_name ) {
 		);
 		wp_style_add_data( "wp-block-{$block_name}-editor", 'rtl', 'replace' );
 	} else {
-		wp_register_style( "wp-block-{$block_name}-editor" );
+		wp_register_style( "wp-block-{$block_name}-editor", false );
 	}
 }
 
