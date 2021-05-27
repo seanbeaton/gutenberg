@@ -169,7 +169,6 @@ function gutenberg_register_core_block_styles( $block_name ) {
 	$style_path        = "build/block-library/blocks/$block_name/style.css";
 	$editor_style_path = "build/block-library/blocks/$block_name/style-editor.css";
 
-	wp_register_style( "wp-block-{$block_name}", false );
 	if ( file_exists( gutenberg_dir_path() . $style_path ) ) {
 		wp_deregister_style( "wp-block-{$block_name}" );
 		wp_register_style(
@@ -182,9 +181,10 @@ function gutenberg_register_core_block_styles( $block_name ) {
 
 		// Add a reference to the stylesheet's path to allow calculations for inlining styles in `wp_head`.
 		wp_style_add_data( "wp-block-{$block_name}", 'path', gutenberg_dir_path() . $style_path );
+	} else {
+		wp_register_style( "wp-block-{$block_name}", false );
 	}
 
-	wp_register_style( "wp-block-{$block_name}-editor" );
 	if ( file_exists( gutenberg_dir_path() . $editor_style_path ) ) {
 		wp_deregister_style( "wp-block-{$block_name}-editor" );
 		wp_register_style(
@@ -194,6 +194,8 @@ function gutenberg_register_core_block_styles( $block_name ) {
 			filemtime( gutenberg_dir_path() . $editor_style_path )
 		);
 		wp_style_add_data( "wp-block-{$block_name}-editor", 'rtl', 'replace' );
+	} else {
+		wp_register_style( "wp-block-{$block_name}-editor" );
 	}
 }
 
