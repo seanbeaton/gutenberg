@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { View } from '../../../index';
-import { Scrollable } from '../index';
+import { View } from '../../../view';
+import { Scrollable } from '../../scrollable';
 
 export default {
 	component: Scrollable,
