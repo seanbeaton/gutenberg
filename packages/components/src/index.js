@@ -110,6 +110,7 @@ export { default as Snackbar } from './snackbar';
 export { default as SnackbarList } from './snackbar/list';
 export { Spacer as __experimentalSpacer } from './spacer';
 export { default as Spinner } from './spinner';
+export { Surface as __experimentalSurface } from './surface';
 export { default as TabPanel } from './tab-panel';
 export { Text as __experimentalText } from './text';
 export { default as TextControl } from './text-control';
