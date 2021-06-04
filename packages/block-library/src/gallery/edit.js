@@ -418,43 +418,6 @@ function GalleryEdit( props ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<PanelBody title={ __( 'Gallery settings' ) }>
-					{ images.length > 1 && (
-						<RangeControl
-							label={ __( 'Columns' ) }
-							value={ columns }
-							onChange={ setColumnsNumber }
-							min={ 1 }
-							max={ Math.min( MAX_COLUMNS, images.length ) }
-							{ ...MOBILE_CONTROL_PROPS_RANGE_CONTROL }
-							required
-						/>
-					) }
-					<ToggleControl
-						label={ __( 'Crop images' ) }
-						checked={ !! imageCrop }
-						onChange={ toggleImageCrop }
-						help={ getImageCropHelp }
-					/>
-					<SelectControl
-						label={ __( 'Link to' ) }
-						value={ linkTo }
-						onChange={ setLinkTo }
-						options={ linkOptions }
-						hideCancelButton={ true }
-					/>
-					{ shouldShowSizeOptions && (
-						<SelectControl
-							label={ __( 'Image size' ) }
-							value={ sizeSlug }
-							options={ imageSizeOptions }
-							onChange={ updateImagesSize }
-							hideCancelButton={ true }
-						/>
-					) }
-				</PanelBody>
-			</InspectorControls>
 			{ noticeUI }
 			<Gallery
 				{ ...props }

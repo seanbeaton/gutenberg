@@ -128,17 +128,7 @@ const deprecated = [
 				>
 					<ul className="blocks-gallery-grid">
 						{ images.map( ( image ) => {
-							let href;
-
-							switch ( linkTo ) {
-								case 'media':
-									href = image.fullUrl || image.url;
-									break;
-								case 'attachment':
-									href = image.link;
-									break;
-							}
-
+							let href = image.fullUrl || image.url
 							const img = (
 								<img
 									src={ image.url }
