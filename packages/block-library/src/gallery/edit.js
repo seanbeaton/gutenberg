@@ -383,42 +383,6 @@ class GalleryEdit extends Component {
 
 		return (
 			<>
-				<InspectorControls>
-					<PanelBody title={ __( 'Gallery settings' ) }>
-						{ images.length > 1 && (
-							<RangeControl
-								label={ __( 'Columns' ) }
-								value={ columns }
-								onChange={ this.setColumnsNumber }
-								min={ 1 }
-								max={ Math.min( MAX_COLUMNS, images.length ) }
-								{ ...MOBILE_CONTROL_PROPS_RANGE_CONTROL }
-								required
-							/>
-						) }
-
-						<ToggleControl
-							label={ __( 'Crop images' ) }
-							checked={ !! imageCrop }
-							onChange={ this.toggleImageCrop }
-							help={ this.getImageCropHelp }
-						/>
-						<SelectControl
-							label={ __( 'Link to' ) }
-							value={ linkTo }
-							onChange={ this.setLinkTo }
-							options={ linkOptions }
-						/>
-						{ shouldShowSizeOptions && (
-							<SelectControl
-								label={ __( 'Image size' ) }
-								value={ sizeSlug }
-								options={ imageSizeOptions }
-								onChange={ this.updateImagesSize }
-							/>
-						) }
-					</PanelBody>
-				</InspectorControls>
 				{ noticeUI }
 				<Gallery
 					{ ...this.props }
